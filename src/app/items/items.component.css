@@ -1,0 +1,44 @@
+ .product-image{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.center{
+    display : flex;
+    width: fit-content;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center; 
+}
+
+
+
+
+.collection{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: fit-content;
+    background-color: white;
+    
+}
+
+.item{
+    
+    background-color: white;
+    padding:0px 15px 25px 15px;
+    width: 350px;
+    outline : 1px solid --border-color;
+    
+    overflow: hidden;
+}
+
+li {
+    list-style-type: none;
+}

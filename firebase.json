@@ -1,0 +1,20 @@
+{
+  "database": {
+    "rules": "database-security.json"
+  },
+  "hosting": {
+    "site":"v34l",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+
+<div class="card">
+    <div class="collection">
+        <li *ngFor="let item of items">
+            <div class="item">
+                <img class="product-image" src="{{item.image}}">
+                <h3>{{item.name | uppercase}}</h3>
+                <p>{{item.price}}</p>
+                
+            </div>
+        </li>
+    </div>
+    
+</div>
+
+
+
