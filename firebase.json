@@ -4,7 +4,7 @@
   },
   "hosting": {
     "site":"v34l",
-    "public": "public",
+    "public": "src",
     "ignore": [
       "firebase.json",
       "**/.*",
