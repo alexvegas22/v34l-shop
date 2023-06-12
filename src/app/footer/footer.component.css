@@ -14,7 +14,7 @@
 .follow-me{
     display: flex;
     flex-direction: column;
-    width: 10%;
+    width: 100px;
     justify-content: center;
     text-align: center;
 }

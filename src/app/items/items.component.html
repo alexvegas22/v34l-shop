@@ -1,17 +1,21 @@
-
-<div class="card">
-<div class="query"><h3> Shop all items</h3></div>
-    <div class="collection">
-        <li *ngFor="let item of items">
-            <div class="item">
-                <img class="product-image" src="{{item.image}}">
-                <h3>{{item.name | uppercase}}</h3>
-                <p>{{item.price}}</p>
-                
-            </div>
-        </li>
+<div class="wrapper">
+    <div class="card">
+        <div class="query">
+            <h3> Shop all items</h3>
+        </div>
+        <div class="collection">
+            <li *ngFor="let item of items">
+                <div class="item">
+                    <img class="product-image" src="{{item.image}}">
+                    <h3>{{item.name | uppercase}}</h3>
+                    <p>{{item.price}}</p>
+                    
+                </div>
+            </li>
+        </div>
     </div>
 </div>
+
 
 
 

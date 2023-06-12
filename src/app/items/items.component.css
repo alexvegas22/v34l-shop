@@ -18,7 +18,7 @@
 }
 
 .item{
-    float: left;
+    
     background-color: white;
     padding:0px 15px 25px 15px;
     width: 350px;
@@ -31,3 +31,18 @@
 li {
     list-style-type: none;
 }
+.card {
+    grid-column: 1/-1;
+    padding : 0;
+    background: white;
+    overflow: hidden;  
+    
+  }
+  .wrapper {
+    margin-left: 200px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,350px); /* same as width of items */
+    padding: 10px; /* move the padding here  */
+
+  }
