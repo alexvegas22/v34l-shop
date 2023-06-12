@@ -1,5 +1,5 @@
 :root{
-    --primary-background: ;
+    --primary-background: lightgray;
     --border-color: lightgray;
     --secondary-background : rgb(230, 230, 230) ;
 }
@@ -14,13 +14,4 @@ html, body {
 }
 body{
     background: var(--secondary-background);
-    width: auto;
 }
-.card {
-    position: relative;
-    margin-bottom: 18px;
-    background: var(--secondary-background);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    overflow: hidden;
-  }

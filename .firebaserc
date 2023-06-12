@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "v34l-9d889"
+  },
+  "targets": {
+    "v34l-9d889": {
+      "hosting": {
+        "V34L": [
+          "v34l"
+        ]
+      }
+    }
   }
 }
