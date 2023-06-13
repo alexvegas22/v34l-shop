@@ -2,7 +2,8 @@
     <div class="wrapper">
         <div class="card">
             <div class="query">
-                <h3> Shop all items</h3>
+                <h3> All items</h3>
+                <p>Showing 1-{{items.length}} out of {{items.length}} items</p>
             </div>
             <div class="collection">
                 <li *ngFor="let item of items">

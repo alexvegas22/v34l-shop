@@ -1,7 +1,11 @@
 .footer{
     background-color: var(--primary-background);
     display: flex;
-    
+    position: absolute;
+    left: 0;
+    bottom: 0;   
+    width: 100%;
+        
 }
 .bottom-section{
     padding :30px;
@@ -17,6 +21,11 @@
     width: 100px;
     justify-content: center;
     text-align: center;
+    background-color: var(--primary-background);
+    position: fixed;
+height: 75px;
+    bottom: 0; 
+    right: 0; 
 }
 .socials{
     display: flex;
