@@ -19,3 +19,13 @@ body{
 @media only screen and (max-width: 450px){
     body{background: white;}
 }
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    margin:0 0 0 20px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
