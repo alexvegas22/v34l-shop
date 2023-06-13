@@ -15,3 +15,7 @@ html, body {
 body{
     background: var(--secondary-background);
 }
+
+@media only screen and (max-width: 450px){
+    body{background: white;}
+}

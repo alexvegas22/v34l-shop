@@ -1,11 +1,10 @@
  .product-image{
-    position: relative;
+    
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
     width: 300px;
     height: 300px;
-    
     object-fit: contain;
 }
 
@@ -25,24 +24,82 @@
     outline : 1px solid var(--border-color);    
     overflow: hidden;
 }
+
 .query{
     padding: 15px;
 }
+
 li {
     list-style-type: none;
 }
+
 .card {
     grid-column: 1/-1;
     padding : 0;
     background: white;
     overflow: hidden;  
-    
   }
+
   .wrapper {
-    margin-left: 10%;
+    width: 80%;
+    align-self:center;
     margin-bottom: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fill,350px); /* same as width of items */
     padding: 10px; /* move the padding here  */
+  }
 
+  .content{
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 450px) {
+    
+    .product-image{
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
+        max-width: 100%;
+        max-height: auto;
+        
+        object-fit:scale-down;
+    }
+    
+    .collection{ 
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .item{
+        background-color: white;
+        padding:0px 15px 25px 15px;
+        width: 100%;
+        outline: 0;
+        border-top : 1px solid var(--border-color);    
+        overflow: hidden;
+    }
+
+      .wrapper {
+        width: 100%;
+        align-self:center;
+        margin-bottom: 10px;
+        display: flex;
+        padding: 10px; /* move the padding here  */
+      }
+    
+      .content{
+        width:100%;
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        width: 100%;
+        padding : 0;
+        background: white;
+        overflow: hidden;  
+      }
+    
+    
   }
