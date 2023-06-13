@@ -12,7 +12,9 @@ jobs:
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          FIREBASE_CLI_EXPERIMENTS: webframeworks
+          
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_V34L_9D889 }}'
           projectId: v34l-9d889
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
