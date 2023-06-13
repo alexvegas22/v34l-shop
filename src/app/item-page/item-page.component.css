@@ -1,0 +1,62 @@
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    margin:20px 20px 0 20px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+            "image shop",
+            "reviews";
+    gap: 30px 30px ;
+    
+    
+    margin: 20px;
+    padding : 0;
+    
+    overflow: hidden;  
+  }
+  .card{
+    background-color: white; 
+    padding: 30px;
+  }
+  .image{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 550px;
+    width: auto;
+    overflow: hidden;
+  }
+
+  .image>img{
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+  .shop{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+  }
+  #last{
+
+   margin-top: auto;
+  }
+  .reviews{
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }

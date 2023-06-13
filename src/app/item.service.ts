@@ -9,6 +9,11 @@ import { Observable, of } from 'rxjs';
 })
 export class ItemService {
 
+  getItem(id: number) : Observable<Item> {
+    const item = itemList.find(item => item.id === id)!
+    return of(item)
+  }
+
   getItems() : Observable<Item[]>{
     const items = of(itemList)
     return items

@@ -6,13 +6,13 @@
                 <p>Showing 1-{{items.length}} out of {{items.length}} items</p>
             </div>
             <div class="collection">
-                <li *ngFor="let item of items">
+                <a *ngFor="let item of items" routerLink="/product/{{item.id}}">
                     <div class="item">
                         <img class="product-image" src="{{item.image}}">
                         <h3>{{item.name | uppercase}}</h3>
                         <p>{{item.price}}</p>
                     </div>
-                </li>
+                </a>
             </div>
         </div>
     </div>

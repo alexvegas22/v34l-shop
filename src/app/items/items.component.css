@@ -26,8 +26,9 @@
 }
 
 .query{
-    padding: 15px;
+    padding: 15px 15px 5px 15px;
 }
+.query>p{text-align: end;}
 
 li {
     list-style-type: none;
@@ -102,4 +103,8 @@ li {
       }
     
     
+  }
+  a{
+    text-decoration: none;
+    color: black;
   }
