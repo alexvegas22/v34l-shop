@@ -7,6 +7,7 @@
 <div class="shop card">
     <h1>{{item.name}}</h1>
     <p>${{item.price}}</p>
+    <button class="addToCart" (click)="addToCart(item)">Add to cart</button>
     <p id="last">{{item.description}}</p>
 </div>
 <div class="reviews card">

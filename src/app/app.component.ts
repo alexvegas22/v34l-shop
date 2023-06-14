@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Firestore } from '@angular/fire/firestore'
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore'
+import { Item } from './item';
+
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,10 @@ import { Firestore } from '@angular/fire/firestore'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'V34L';
-  constructor( private store: Firestore) {}
+
+  constructor() {
+  }
 
 }

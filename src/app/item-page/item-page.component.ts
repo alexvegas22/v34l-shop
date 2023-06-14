@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ItemService } from '../item.service';
 import { Item } from '../item';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 
 @Component({
@@ -12,10 +13,15 @@ import { Item } from '../item';
 })
 
 export class ItemPageComponent implements OnInit{
+  
+addToCart(item : Item):void {
+ this.cartService.addToCart(item)
+}
 
   item: Item | undefined;
 
   constructor(
+    private cartService:ShoppingCartService,
     private route: ActivatedRoute,
     private itemService: ItemService,
     private location: Location

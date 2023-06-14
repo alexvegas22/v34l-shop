@@ -55,6 +55,17 @@
     grid-column-start: 1;
     grid-column-end: 3;
   }
+  .addToCart{
+    background-color: var(--primary-background);
+    height: 30px;
+    width: 130px;
+    border: 1px solid gray;
+    border-radius: 20px;
+  }
+  .addToCart:hover{
+    transform:scale(1.1);
+    background-color: var(--secondary-background);
+  }
 
   @media only screen and (max-width: 600px) {
     .container{

@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Item } from './item';
 import { itemList } from './mock-items';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
-@Injectable({
+@Injectable({ 
   providedIn: 'root'
 })
 export class ItemService {
@@ -18,5 +18,7 @@ export class ItemService {
     const items = of(itemList)
     return items
   }
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 }

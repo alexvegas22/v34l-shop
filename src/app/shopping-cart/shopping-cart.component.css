@@ -1,8 +1,46 @@
 .container{
+    margin:auto;
+    margin-bottom: 100px;;
     display: flex;
-    width: 100%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.item{
+
+    outline: 1px solid lightgray;
+    
+    height: 70px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    padding : 15px;
+    padding-bottom: 5px;
+}
+.item>img{
+    height: 70px;
+    align-self: center;
+    margin-right: 20px ;
+}
+
+.remove{
+    background-color: var(--primary-background);
+    height: 30px;
+    width: 130px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    align-self: center;
+  }
+
+.remove:hover{
+    transform:scale(1.1);
+    background-color: var(--secondary-background);
+  }
+.price{
+    margin:50px;
 }
