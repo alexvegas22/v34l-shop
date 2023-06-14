@@ -1,6 +1,6 @@
 .container{
     margin:auto;
-    margin-bottom: 100px;;
+    
     display: flex;
     width: 60%;
     height: 60%;
@@ -9,21 +9,23 @@
     text-align: center;
     flex-direction: column;
     background-color: white;
+    
 }
 
 .item{
 
     outline: 1px solid lightgray;
-    
-    height: 70px;
+    margin-bottom:25px;
+    height: 100px;
     display: flex;
     justify-content:space-between;
     flex-direction: row;
     padding : 15px;
     padding-bottom: 5px;
+    overflow: hidden;
 }
 .item>img{
-    height: 70px;
+    height: 100px;
     align-self: center;
     margin-right: 20px ;
 }
