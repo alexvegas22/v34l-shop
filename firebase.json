@@ -16,16 +16,12 @@
           "source": "**",
           "destination": "/index.html"
         }
-      ]}, 
+      ]
+    },
     {
       "target": "V34L",
       "source": ".",
       "frameworksBackend": {}
-    },{
-      "firestore": {
-        "rules": "firestore.rules",
-        "indexes": "firestore.indexes.json"
     }
-    }  
   ]
-  }
+}
