@@ -1,21 +1,30 @@
-<button type="button" (click)="return()" id="back"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACGElEQVR4nO3ZTYhNYRzH8c+YhfIydTNKYkXERqMoGzUikViwsLKhbLwUyYKiUJOVjYWNhY1kQzKxsfNSSlKSSey81CzkLe9XJ8+t0+nOzD3n3jNzHu63fttznu+9//P8z/85dOkSFQv8A6zDGxHTi5P4hbpImYvbQaCR6FiL1xmJqER6cBDfm0hEIzIHw2MIRCOyCq8mkKjHUErfWpCorEgfrrYoUFmRlXiRU6JyIvvwtYBEkk9hW36GO7iAI1iPWZNZSlcKCrSSH3iIY1hclsQKPC9RolnuYjumdUpiD75MskQ6I9jajsBMXJpCgWyGi4wCS/GkAovPZhRb8ogsx9MKLLxZfuNQzKVVz+R03jLbhc8VWHi9SY4W2X5HKlpmO/LKzMblCiy+nslHLDHJryhl5V7RxpnMHy8L3HAG5mMZ1mBbqPOLeNDms7hXQWq4nvNmEzEdgziDRwV6TF87g9XhcWb0vCJZBnAe71u8/gkVH3VrGGrhnW80/Ktt0Y9bJYk0WNjkrCybnTpAsnMcx8+SRBrlfGCcc4JkYOsYg+GstwyRBhvwYYwmuUgHmRd+nbJEElaHhpiV2a+EQ+xTJR9ibwpjclrkRpmfFd6WdXF/n8vsIUfbu9dUfOjpxf2MTNISomQgVcJJdouYaymRcyJmY0rkpojpSQ2Aj0XO2SDyTuRsDiJJo4ya/iCSNMnoqYV06dLlf+APek2XLcDc4fAAAAAASUVORK5CYII="></button>
+<button type="button" (click)="return()" id="back"><img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACGElEQVR4nO3ZTYhNYRzH8c+YhfIydTNKYkXERqMoGzUikViwsLKhbLwUyYKiUJOVjYWNhY1kQzKxsfNSSlKSSey81CzkLe9XJ8+t0+nOzD3n3jNzHu63fttznu+9//P8z/85dOkSFQv8A6zDGxHTi5P4hbpImYvbQaCR6FiL1xmJqER6cBDfm0hEIzIHw2MIRCOyCq8mkKjHUErfWpCorEgfrrYoUFmRlXiRU6JyIvvwtYBEkk9hW36GO7iAI1iPWZNZSlcKCrSSH3iIY1hclsQKPC9RolnuYjumdUpiD75MskQ6I9jajsBMXJpCgWyGi4wCS/GkAovPZhRb8ogsx9MKLLxZfuNQzKVVz+R03jLbhc8VWHi9SY4W2X5HKlpmO/LKzMblCiy+nslHLDHJryhl5V7RxpnMHy8L3HAG5mMZ1mBbqPOLeNDms7hXQWq4nvNmEzEdgziDRwV6TF87g9XhcWb0vCJZBnAe71u8/gkVH3VrGGrhnW80/Ktt0Y9bJYk0WNjkrCybnTpAsnMcx8+SRBrlfGCcc4JkYOsYg+GstwyRBhvwYYwmuUgHmRd+nbJEElaHhpiV2a+EQ+xTJR9ibwpjclrkRpmfFd6WdXF/n8vsIUfbu9dUfOjpxf2MTNISomQgVcJJdouYaymRcyJmY0rkpojpSQ2Aj0XO2SDyTuRsDiJJo4ya/iCSNMnoqYV06dLlf+APek2XLcDc4fAAAAAASUVORK5CYII="></button>
 
 
 <div class="container" *ngIf="total==0">
     Your shopping cart is empty
 </div>
 
-<div  *ngIf="cart">
-    
+<div *ngIf="cart">
+
     <div *ngIf="total!=0">
-        <div class="container item" *ngFor="let item of cart">
-            <img src={{item.image}}>
-            <div><h3>{{item.name | uppercase}}</h3>
-            <p>${{item.price}}</p>
+        <div class="">
+            <div class="container top-section">
+                <p>Product</p>
+                <p>Price</p>
+            </div>
+            <div class="container item" *ngFor="let item of cart">
+                <img src={{item.image}}>
+                <div>
+                    <h3>{{item.name | uppercase}}</h3>
+                    <p>${{item.price}}</p>
+                </div>
+                <button class="remove" (click)="removeItem(item)">Remove</button>
+            </div>
+
         </div>
-            <button class="remove" (click)="removeItem(item)">Remove</button>
-        </div>
-        
+
         <div class="container item">
             <h4 class="price">Total price : {{total}}</h4>
             <button class="remove">Check Out</button>
