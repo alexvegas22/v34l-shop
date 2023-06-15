@@ -6,7 +6,7 @@
     Your shopping cart is empty
 </div>
 
-<div *ngIf="cart">
+<div *ngIf="Usercart">
 
     <div *ngIf="total!=0">
         <div class="">
@@ -14,7 +14,7 @@
                 <p>Product</p>
                 <p>Price</p>
             </div>
-            <div class="container item" *ngFor="let item of cart">
+            <div class="container item" *ngFor="let item of Usercart">
                 <img src={{item.image}}>
                 <div>
                     <h3>{{item.name | uppercase}}</h3>

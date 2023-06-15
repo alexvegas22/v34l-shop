@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Item } from './item';
-import { shoppingCart } from './mock-cart';
+
 import { Observable, of } from 'rxjs';
 
 @Injectable({
@@ -8,33 +8,40 @@ import { Observable, of } from 'rxjs';
 })
 export class ShoppingCartService {
 
-  userCart: Item[] =this.getCart()
-  
-  constructor() { 
-    this.userCart = this.getCart()
-  }
-  
+  userCart: Item[] = []
 
-  addToCart(item: Item): void{
-    shoppingCart.push(item)
-  }
+  constructor() { }
 
-  removeFromCart(item: Item): void{
-    shoppingCart.pop();
+  addToCart(item: Item): void {
+    const cart = this.getCart()
+    cart.push(item)
+    this.updateSessionCart(cart);
   }
 
-  getCart() : Item[]{
-    const cart = shoppingCart
-    return cart
+  removeFromCart(item: Item): void {
+    this.userCart = this.userCart.filter((e) => e !== item)
+    this.updateSessionCart(this.userCart);
   }
-  
-  getTotal():number{
-    let _total:number = 0
-    if(shoppingCart){
-    
-      shoppingCart.forEach(function(item){  
-        _total+=item.price
-       }) 
-    } return _total
+
+  getCart(): Item[] {
+    const cart = sessionStorage.getItem('cart')
+    if (cart) {
+      this.userCart = (JSON.parse(cart));
+      console.log("cart updated");
+
+    }
+    return this.userCart
+  }
+
+  getTotal(): number {
+    let _total: number = 0
+    this.userCart.forEach(function (item) {
+      _total += item.price
+    })
+    return _total
+  }
+
+  updateSessionCart(cart: Item[]) {
+    sessionStorage.setItem('cart', JSON.stringify(cart))
   }
 }

@@ -9,33 +9,30 @@ import { get } from 'firebase/database';
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css']
 })
-export class ShoppingCartComponent implements OnInit{
-  @Input() cart?: Item[];
+export class ShoppingCartComponent implements OnInit {
+  @Input() Usercart: Item[] = [];
 
-  total:number = 0;
+  total: number = 0;
 
-  constructor( 
+  constructor(
     private location: Location,
     private shoppingCartService: ShoppingCartService
-    ){
-      
-    }
+  ) { }
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.getCart()
     this.getTotal()
   }
 
-  getTotal():void{
-    this.total = this.shoppingCartService.getTotal()  
-  }      
-  
-
-  getCart():void{
-    this.cart = this.shoppingCartService.getCart()
+  getTotal(): void {
+    this.total = this.shoppingCartService.getTotal()
   }
 
-  removeItem(item:Item):void{
+  getCart(): void {
+    this.Usercart = this.shoppingCartService.getCart()
+  }
+
+  removeItem(item: Item): void {
     this.shoppingCartService.removeFromCart(item)
     this.getCart()
     this.getTotal()
