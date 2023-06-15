@@ -27,8 +27,6 @@ export class ShoppingCartService {
     const cart = sessionStorage.getItem('cart')
     if (cart) {
       this.userCart = (JSON.parse(cart));
-      console.log("cart updated");
-
     }
     return this.userCart
   }

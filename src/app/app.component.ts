@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore'
-import { Item } from './item';
-
 
 @Component({
   selector: 'app-root',
@@ -14,6 +12,4 @@ export class AppComponent {
 
   constructor() {
   }
-
-
 }

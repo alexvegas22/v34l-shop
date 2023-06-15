@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Item } from '../item';
 import { ShoppingCartService } from '../shopping-cart.service';
-import { get } from 'firebase/database';
 
 @Component({
   selector: 'app-shopping-cart',
