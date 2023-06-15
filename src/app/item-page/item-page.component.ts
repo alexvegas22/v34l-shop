@@ -12,26 +12,28 @@ import { ShoppingCartService } from '../shopping-cart.service';
   styleUrls: ['./item-page.component.css']
 })
 
-export class ItemPageComponent implements OnInit{
-  
-addToCart(item : Item):void {
- this.cartService.addToCart(item)
-}
+export class ItemPageComponent implements OnInit {
+
+  addToCart(item: Item, event: any): void {
+    this.cartService.addToCart(item)
+    event.target.disabled = true;
+    (event.target as HTMLButtonElement).innerText = "Added to cart"
+  }
 
   item: Item | undefined;
 
   constructor(
-    private cartService:ShoppingCartService,
+    private cartService: ShoppingCartService,
     private route: ActivatedRoute,
     private itemService: ItemService,
     private location: Location
-  ){}
+  ) { }
 
   ngOnInit(): void {
     this.getItem();
   }
-  
-  getItem():void{
+
+  getItem(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'))
     this.itemService.getItem(id)
       .subscribe(item => this.item = item)
