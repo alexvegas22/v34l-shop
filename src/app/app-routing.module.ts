@@ -7,14 +7,14 @@ import { ItemPageComponent } from './item-page/item-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/shop', pathMatch: 'full' },
-  { path: 'shop', component: ShopComponent},
-  { path: 'cart', component: ShoppingCartComponent},
-  { path:'items', component: ItemsComponent},
-  { path: 'product/:id', component: ItemPageComponent}
+  { path: 'shop', component: ShopComponent },
+  { path: 'cart', component: ShoppingCartComponent },
+  { path: 'items', component: ItemsComponent },
+  { path: 'product/:id', component: ItemPageComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
